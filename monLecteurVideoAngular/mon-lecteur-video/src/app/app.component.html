@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{title}}</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+</head>
+<body>
+
+
+<h1 class='center'>{{title}}</h1>
+<div class='container'>
+<div class="row">
+
+<div *ngFor='let video of videos' class="col s6 m6">
+  <div class="card horizontal" vidBorderCard>
+
+    <div class="card-image">
+      <img [src]="video.picture">
+    </div>
+
+    <div class="card-stacked">
+      <div class="card-content">
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+ <img
+  src=".\assets\logo.png"
+  width="300"
+ 
+  class="center"
+  
+  >
+
+
+  <br>
+  <video 
+    id="videoplayer" 
+    src="{{videoLink}}"
+    #player
+  ></video>
+
+
+  <br>
+
+  
+    
+    <button vidVideoControl
+    
+    >
+    <img 
+      src=".\assets\play.png"
+      width="30" 
+      height="30"
+    > 
+    </button>
+    <button 
+    id="log" 
+    (click)= "log()"
+    > 
+      <img 
+      src=".\assets\play.png"
+      width="30" 
+      height="30" 
+      > 
+    
+    </button>
+
+  
+
+    <button 
+      id="pause">
+      <img
+      src=".\assets\pause.png"
+      width="30" 
+      height="30"
+    >
+    </button>
+    
+  
+    <button 
+    id="recul10">
+    <img
+      src=".\assets\back.png"
+      width="30" 
+       height="30"
+    >
+    </button>
+  
+    <input
+    id="inputSetTime"
+    type="number" 
+    placeholder="Temps de la vidéo en secs" 
+    > 
+  
+    <button id="setTime" type="button">GO</button>
+  
+    <button id="avance10"><img
+    src=".\assets\head.png"
+    width="30" 
+    height="30"
+  ></button>
+  
+    <button id="vitesse2m"><img
+    src=".\assets\less.png"
+    width="30" 
+     height="30"
+  ></button>
+  
+    <button id="vitesse2" ><img
+    src=".\assets\plus.png"
+    width="30" 
+     height="30"
+  ></button>
+
+ 
+</body>
+</html>
